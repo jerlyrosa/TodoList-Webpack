@@ -1,15 +1,15 @@
 import './styles.css'
 import { Todo, TodoList } from './js/class/index';
-
+import { createdTodoHtml } from './js/components'
 
 const todoList = new TodoList();
 
-const tasks =  new Todo('Aprender cultura nordica');
-const tasks2 =  new Todo('Aprender cultura nordica v.2');
+const task =  new Todo('Aprender cultura nordica');
 
-todoList.newTodo( tasks );
-todoList.newTodo( tasks2 );
+todoList.newTodo( task );
 
+task.completed =  true;
 
+createdTodoHtml( task )
 
 console.log( todoList )
