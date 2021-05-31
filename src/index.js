@@ -1,8 +1,15 @@
 import './styles.css'
-import { Todo } from './js/class/todo.class'
+import { Todo, TodoList } from './js/class/index';
+
+
+const todoList = new TodoList();
+
+const tasks =  new Todo('Aprender cultura nordica');
+const tasks2 =  new Todo('Aprender cultura nordica v.2');
+
+todoList.newTodo( tasks );
+todoList.newTodo( tasks2 );
 
 
 
-const tasks =  new Todo('Viene el raganark')
-
-console.log( tasks )
+console.log( todoList )
